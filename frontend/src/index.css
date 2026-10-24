@@ -1,0 +1,290 @@
+/* Variables de diseño y paleta de colores */
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --radius: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Tarjetas */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 24px;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: var(--text-main);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+}
+
+/* Campos de Formulario */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Tarjetas de Métricas Estadísticas */
+.grid-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.metric-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.metric-card span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.metric-card h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--text-main);
+}
+
+/* Tabla de Distribución de Frecuencias */
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  text-align: center;
+}
+
+.custom-table th {
+  background-color: #f1f5f9;
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.custom-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+}
+
+.custom-table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Cuadrícula de Gráficas */
+.grid-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 20px;
+}
+
+.chart-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos Tabla Estilo Excel */
+.excel-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #d9e1e8;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95rem;
+}
+
+.excel-table th, 
+.excel-table td {
+  border: 1.5px solid #1e1e1e;
+  padding: 8px 12px;
+  text-align: right;
+}
+
+.excel-table thead th {
+  background-color: #cbd5e1;
+  font-weight: 600;
+  text-align: center;
+}
+
+.excel-table tbody tr {
+  background-color: #d9e1e8;
+}
+
+/* Celda destacada en amarillo para f */
+.excel-table tbody tr:first-child td.highlight-f {
+  background-color: #fef08a;
+  font-weight: bold;
+}
+
+/* Fila de Totales */
+.excel-table tfoot tr {
+  background-color: #d9e1e8;
+}
+
+.excel-table td.total-cell {
+  background-color: #8193b0;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Sección de Datos Ordenados */
+.data-pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 6px;
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.data-pill {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 0.9rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.pill-index {
+  background-color: #e2e8f0;
+  color: #64748b;
+  padding: 6px 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-right: 1px solid #cbd5e1;
+}
+
+.pill-value {
+  padding: 6px 12px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Ocultar elementos innecesarios al imprimir PDF */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  /* Solo mostrar el contenedor de resultados */
+  .container > div:last-child, 
+  .container > div:last-child * {
+    visibility: visible;
+  }
+  .container > div:last-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  /* Ocultar los botones de acción del PDF */
+  .card:has(button) {
+    display: none !important;
+  }
+}
+
+.card, .chart-card, .table-container, .metric-card {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
